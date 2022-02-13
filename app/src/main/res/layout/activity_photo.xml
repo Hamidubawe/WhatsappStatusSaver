@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotoActivity"
+    android:background="#201F1F">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/photoView" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floatBtn"
+        android:layout_above="@id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:paddingBottom="25dp"
+        app:menu_animationDelayPerItem="55"
+        app:menu_buttonSpacing="0dp"
+        app:menu_colorNormal="@color/colorPrimary"
+        app:menu_colorPressed="#444"
+        app:menu_labels_cornerRadius="3dp"
+        app:menu_labels_ellipsize="none"
+        app:menu_fab_hide_animation="@anim/fab_slide_in_from_right"
+        app:menu_labels_maxLines="-1"
+        android:padding="8dp"
+        app:menu_labels_position="left"
+        app:menu_labels_singleLine="false"
+        app:menu_labels_textColor="@color/colorAccent"
+        app:menu_openDirection="up"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorBlue"
+            app:fab_colorPressed="@color/colorBlueLight"
+            app:fab_label="Save"
+            android:src="@drawable/ic_baseline_arrow_downward_24"
+            android:id="@+id/saveTODevice"
+            android:padding="5dp"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_share"
+            android:id="@+id/sharePhoto"
+            android:padding="5dp"
+            app:fab_size="mini"
+            app:backgroundTint="@color/colorBlue"
+            app:fab_colorNormal="@color/colorBlue"
+            app:fab_colorPressed="@color/colorBlueLight"
+            app:fab_label="Share"/>
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_downward_24"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:id="@+id/saveButton"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@id/adView"
+        android:contentDescription="TODO" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        ads:adSize="SMART_BANNER"
+        android:layout_alignParentBottom="true"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>

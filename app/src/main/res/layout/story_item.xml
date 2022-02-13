@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:background="#000">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:id="@+id/statusPhoto"
+            android:scaleType="centerCrop"
+            android:src="@drawable/whatappbusiness"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/statusPlay"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_play"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/downLoadBtn"
+                android:src="@drawable/ic_download_button"
+                android:layout_weight="1"
+                android:background="#000"
+                android:layout_marginEnd="1.5dp"
+                android:layout_gravity="bottom"
+                android:padding="3dp"
+                android:layout_marginRight="1.5dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shareBtn"
+                android:padding="3dp"
+                android:src="@drawable/ic_share"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:background="#000"
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginStart="1.5dp"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

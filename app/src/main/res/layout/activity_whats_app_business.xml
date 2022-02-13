@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".WhatsAppBusinessActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chat_tab"
+            android:layout_margin="0dp"
+            android:background="@color/colorPrimary"
+            app:tabBackground="@color/colorPrimary"
+            app:tabIndicatorColor="#03A9F4"
+            app:tabTextColor="#ffffff" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar"
+        android:id="@+id/chatViewPager">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <FrameLayout
+    android:id="@+id/frameLayout"
+        android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/adView"
+    />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        android:layout_above="@id/bottomNavigation"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:itemTextColor="@drawable/selector_bottom"
+        app:itemIconTint="@drawable/selector_bottom"
+        android:clickable="true"
+        android:visibility="gone"
+        android:layout_marginEnd="0dp"
+        app:itemHorizontalTranslationEnabled="true"
+        app:labelVisibilityMode="labeled"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav"
+        android:focusable="true" />
+
+
+</RelativeLayout>
